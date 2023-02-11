@@ -107,13 +107,13 @@ import fileUpload from "express-fileupload"
 import cron from "node-cron"
 import time from "moment-timezone"
 
- const { hitCounter, getRoute } = require("./library/functions");
-const { profilePath, user } = require("./library/settings");
-const { connectMongoDb } = require("./database/connect");
-const { User } = require("./database/model");
-const apirouter = require("./routing/api");
-const userRouters = require("./routing/users");
-const premiumRouters = require('./routing/premium');
+ const { hitCounter, getRoute } = require(join(__dirname, "./library/functions.js");
+const { profilePath, user } = require(join(__dirname, "./library/settings.js");
+const { connectMongoDb } = require(join(__dirname, "./database/connect.js");
+const { User } = require(join(__dirname, "./database/model.js");
+const apirouter = require(join(__dirname, "./routing/api.js");
+const userRouters = require(join(__dirname, "./routing/users.js");
+const premiumRouters = require(join(__dirname, './routing/premium.js');
 const app = new express();
 const PORT = process.env.PORT || 3000;
 
@@ -165,7 +165,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
-require("./library/config")(passport);
+require(join(__dirname, "./library/config.js")(passport);
 app.use(flash());
 app.use(function (req, res, next) {
 	res.locals.success_msg = req.flash("success_msg");
