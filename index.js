@@ -107,13 +107,13 @@ import fileUpload from "express-fileupload"
 import cron from "node-cron"
 import time from "moment-timezone"
 
- const { hitCounter, getRoute } = require(join(__dirname, "./library/functions.js"));
-const { profilePath, user } = require(join(__dirname, "./library/settings.js"));
-const { connectMongoDb } = require(join(__dirname, "./database/connect.js"));
-const { User } = require(join(__dirname, "./database/model.js"));
-const apirouter = require(join(__dirname, "./routing/api.js"));
-const userRouters = require(join(__dirname, "./routing/users.js"));
-const premiumRouters = require(join(__dirname, './routing/premium.js'));
+const { hitCounter, getRoute } = await(await import("./library/functions.js"));
+const { profilePath, user } = await(await import("./library/settings.js"));
+const { connectMongoDb } = await(await import("./database/connect.js"));
+const { User } = await(await import("./database/model.js"));
+const apirouter = await(await import("./routing/api.js"));
+const userRouters = await(await import("./routing/users.js"));
+const premiumRouters = await(await import('./routing/premium.js'));
 const app = new express();
 const PORT = process.env.PORT || 3000;
 
