@@ -115,7 +115,7 @@
         "readline": "*",
         "request" : "*",
         "sagiri" : "*",
-        "serve-favicon": "^2.5.0"
+        "serve-favicon": "^2.5.0",
         "similarity": "*",
         "social-downloader-cherry" : "*",
         "social_media_downloader" : "*",
