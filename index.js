@@ -107,14 +107,14 @@ import fileUpload from "express-fileupload"
 import cron from "node-cron"
 import time from "moment-timezone"
 
-const { hitCounter, getRoute } = require("./library/functions");
-const { profilePath, user } = require("./library/settings");
-const { connectMongoDb } = require("./database/connect");
-const { User } = require("./database/model");
-const apirouter = require("./routing/api");
-const userRouters = require("./routing/users");
-const premiumRouters = require('./routing/premium');
-const app = express();
+ import { hitCounter, getRoute }  from "./library/functions.js"
+ import { profilePath, user }  from "./library/settings.js"
+ import { connectMongoDb }  from "./database/connect.js"
+ import { User }  from "./database/model.js"
+ import apirouter  from "./routing/api.js"
+ import userRouters  from "./routing/users.js"
+ import premiumRouters  from './routing/premium.js'
+const app = new express();
 const PORT = process.env.PORT || 3000;
 
 app.use(Limiter({
