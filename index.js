@@ -94,18 +94,18 @@ function start(file) {
 start("main.js")
 
 import favicon from "serve-favicon"
-const express = require("express");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
-const MemoryStore = require("memorystore")(session);
-const expressLayout = require("express-ejs-layouts");
-const compression = require("compression");
-const passport = require("passport");
-const flash = require("connect-flash");
-const Limiter = require("express-rate-limit");
-const fileUpload = require("express-fileupload");
-const cron = require("node-cron");
-const time = require("moment-timezone");
+import express from "express"
+import cookieParser from "cookie-parser"
+import session from "express-session"
+import MemoryStore from "memorystore"
+import expressLayout from "express-ejs-layouts"
+import compression from "compression"
+import passport from "passport"
+import flash from "connect-flash"
+import Limiter from "express-rate-limit"
+import fileUpload from "express-fileupload"
+import cron from "node-cron"
+import time from "moment-timezone"
 
 const { hitCounter, getRoute } = require("./library/functions");
 const { profilePath, user } = require("./library/settings");
