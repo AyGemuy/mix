@@ -93,7 +93,7 @@ function start(file) {
 
 start("main.js")
 
-const favicon = require("serve-favicon");
+import favicon from "serve-favicon"
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
